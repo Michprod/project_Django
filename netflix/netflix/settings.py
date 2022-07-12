@@ -128,8 +128,16 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = BASE_DIR / 'static/film_pic'
 
-
+#pour dire a crispy d'utileser bootstra^4
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+#pour les users authantifies soient redirige vers le home 
+LOGIN_REDIRECT_URL = 'film-home'
+
+
+
+
 
 
 # Default primary key field type
