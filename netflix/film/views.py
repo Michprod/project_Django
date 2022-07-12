@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from film.models import Film 
 import random
+from django.views.generic import DetailView
 # Create your views here.
 
 def hello(request,name):
@@ -16,6 +17,9 @@ def home(request):
     return render(request,"film/home.html",{"films":films,"films_aleatoire" : films_aleatoire })
   
 
-def filmDetail(request,pk):
-      film =Film.objects.filter(id=pk).first()
-      return render(request,"film/film_detail.html",{'object':film})
+# def filmDetail(request,pk):
+#       film =Film.objects.filter(id=pk).first()
+#       return render(request,"film/film_detail.html",{'object':film})
+
+class FilmDetail(DetailView):
+      model = Film

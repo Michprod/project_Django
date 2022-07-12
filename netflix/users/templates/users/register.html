@@ -1,0 +1,29 @@
+{% extends 'film/base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-8 col-md-4 mx-auto">
+        <form method="post" action>
+               {% csrf_token %}
+               <div class="form-group">
+                 <legend class="mb-4 border-bottom text-center text-uppercase">Rejoignez nous !</legend>
+
+               </div>
+               <div class="form-group">
+                 <button class="btn btn-outline-info" type="submit">Sign now</button>
+               </div>
+               <div class="border-top mt-3">
+
+                <small class="text-muted">
+                    Already have an account? <a class="ml-2" href="#">Sign in</a>
+               </small>
+                
+
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
