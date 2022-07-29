@@ -134,6 +134,9 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 #pour les users authantifies soient redirige vers le home 
 LOGIN_REDIRECT_URL = 'film-home'
 
+#permet de rediriger un internqute vers /login s'il essaie d'acceder a une rout protegr par @login_required
+LOGIN_URL = 'login'
+
 
 
 
